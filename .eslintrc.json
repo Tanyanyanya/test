@@ -1,0 +1,23 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true, 
+        "node": true
+    },
+    "extends": ["plugin:sonarjs/recommended", "airbnb", "prettier", "prettier/@typescript-eslint", "plugin:@typescript-eslint/recommended"],
+    "plugins": ["prettier", "sonarjs", "@typescript-eslint"],
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "rules": {
+        "prettier/prettier": "error",
+        "no-unused-vars": "warn",
+        "no-console": "off",
+        "func-names": "off", 
+        "no-process-exit": "off",
+        "class-methods-use-this": "off"
+    }
+}
