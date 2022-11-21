@@ -1,10 +1,9 @@
 {
     "env": {
-        "browser": true,
         "es2021": true, 
         "node": true
     },
-    "extends": ["plugin:sonarjs/recommended", "airbnb", "prettier", "prettier/@typescript-eslint", "plugin:@typescript-eslint/recommended"],
+    "extends": ["plugin:sonarjs/recommended", "airbnb", "prettier/@typescript-eslint", "plugin:@typescript-eslint/recommended", "prettier"],
     "plugins": ["prettier", "sonarjs", "@typescript-eslint"],
     "overrides": [
     ],

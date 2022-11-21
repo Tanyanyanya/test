@@ -1,14 +1,14 @@
 {
   "name": "noda",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
     "lint": "eslint /**/*.{js, jsx, ts, tsx}\"",
-    "prettier:fix": "prettier --write /**/*.{js, jsx, ts, tsx}",
-    "prettier:check": "prettier /**/*.{js, jsx, ts, tsx}",
-    "test": "jest",
-    "start": "nodemon index.js"
+    "prettier:fix": "prettier . --write --ignore-path .gitignore",
+    "prettier:check": "prettier . --check --ignore-path .gitignore",
+    "start": "node src/router.js"
   },
   "husky": {
     "hooks": {
@@ -19,33 +19,26 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2",
-    "jest": "^29.2.2",
-    "nodemon": "^2.0.20"
+    "@types/async": "^3.2.15",
+    "async": "^3.2.4",
+    "esm": "^3.2.25",
+    "http": "^0.0.1-security"
   },
   "devDependencies": {
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-node": "^4.1.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-sonarjs": "^0.16.0",
     "husky": "^8.0.0",
     "lint-staged": "^13.0.3",
-    "nodemon": "^2.0.20",
     "prettier": "^2.7.1",
     "typescript": "^4.8.4"
   },
   "lint-staged": {
-    "src/**/*.{ts, tsx, js, jsx}": [
-      "npm run prettier:fix",
-      "npm run lint",
-      "git add"
-    ]
+    "**/*.js": "eslint",
+    "*": "prettier --check --ignore-path .gitignore"
   }
 }
