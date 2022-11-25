@@ -1,7 +1,7 @@
 import * as http from 'node:http'
 import router from './router.js'
 import defaultHandler from './defaultHandler.js'
-import helpers from './helpers.js'
+import helpers from './helper.js'
 import { safeJSON } from './utils.js'
 
 const processedContentTypes = {
